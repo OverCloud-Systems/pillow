@@ -36,8 +36,6 @@
     </div>
   </div>
 
-  <div class="footer">OverCloud 2024 - <a href="https://discord.gg/KZzVM4rfg6" class="footerlink">Discord</a></div>
-
   <h1 class="large-h">Tab Cloaking</h1>
   <div id="settabs">
     <div class="settab7" onclick="setreset()"><img width="70" height="70" class="setimg" title="Pillow"
@@ -52,11 +50,13 @@
 
   <h1 class="large-h">Search Theme</h1>
   <div style="text-align: center;" class="parent">
-    <select id="themes_select" name="themes">
+    <select id="themes_select" name="themes" onchange="setTheme(document.getElementById('themes_select').value)">
       <option value="OverCloud">OverCloud</option>
       <option value="Google">Google</option>
     </select>
   </div>
+
+  <div class="footer">OverCloud 2024 - <a href="https://discord.gg/KZzVM4rfg6" class="footerlink">Discord</a></div>
 
   <!-- <h1 class="large-h">Cloud Speed</h1>
   <div style="width: 100%; text-align: center" class="slidecontainer">
@@ -71,7 +71,7 @@
   </div> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/settings.js"></script>
+  <script src="https://effective-fishstick-5ggjw7grp65v24469-8080.app.github.dev/js/settings.js"></script>
   <script src="js/global.js"></script>
 </body>
 

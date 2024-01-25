@@ -62,12 +62,12 @@ form.addEventListener('submit', async event => {
 
 // console.log(localStorage.getItem("corrosion"))
 
-var theme = localStorage.getItem("theme") || "default";
-if (theme != "OverCloud") {
-    // temp code
-    if (theme === "Google") {
-        redirect("google.html");
-    }
+localStorage.setItem("theme","Google");
+
+var theme = localStorage.getItem("theme") || "OverCloud";
+
+if (theme === "Google") {
+    window.location.replace("google.html");
 }
 
 /*
@@ -96,7 +96,6 @@ if (localStorage.hasOwnProperty("title")) {
 if (localStorage.hasOwnProperty("favicon")) {
     document.querySelector("link[rel='shortcut icon']").href = favicon;
 }
-
 
 /* Cloud Stuff */
 

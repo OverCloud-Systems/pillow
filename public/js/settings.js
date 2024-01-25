@@ -33,7 +33,7 @@ if (localStorage.hasOwnProperty("favicon")) {
 }
 
 if (!localStorage.hasOwnProperty("theme")) {
-  localStorage.setItem("theme","default");
+  localStorage.setItem("theme","OverCloud");
 }
 
 function settitle(title) {
@@ -91,6 +91,10 @@ function setTheme(name) {
 
 const themes_set = document.getElementById("themes_select");
 themes_set.value = theme;
+themes_set.onchange = (event) =>{
+  setTheme(themes_set.value);
+  alert(themes_set.value);
+}
 
 // function setGameCloud(){
 //   let left = document.getElementById('games_cloud').style.left;
