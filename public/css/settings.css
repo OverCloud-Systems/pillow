@@ -9,20 +9,23 @@ body {
   background: linear-gradient(133deg, rgba(10,15,25,1) 0%, rgba(9,9,60,1) 28%, rgba(10,13,50,1) 68%, rgba(10,15,25,1) 100%);
   width: 100vw;
   overflow-x: hidden;
+  color: white;
 }
 
 .inline-block-child {
   display: inline-block;
 }
 
-h1 {
-  font-size: 100px;
-  color: white;
+.large-h {
+  font-size: 60px;
 }
 
-h2 {
-  font-size: 55px;
-  color: white;
+.medium-h {
+  font-size: 45px;
+}
+
+.small-h {
+  font-size: 35px;
 }
 
 /* Switch Stuff */
@@ -93,18 +96,6 @@ input:checked+.slider:before {
   display: flex;
   justify-content: center;
 
-}
-
-cloud_floating_container {
-  width: 100%;
-}
-
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
 }
 
 .form__input {
@@ -186,4 +177,8 @@ cloud_floating_container {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+footer {
+  text-align: center;
 }

@@ -5,39 +5,17 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1159935819017436"
-    crossorigin="anonymous"></script>
-  <script async src="https://arc.io/widget.min.js#fFNTMsJ9"></script>
   <meta charset="UTF-8">
   <title>OverCloud | Settings</title>
 </head>
 
 <body id="body">
-
-  <!-- Settings Page !-->
   <a onclick="setGameCloud(); setHomeCloud();" href="/gs"> <img class="clouds" id="games_cloud" style="position: absolute; width: 200px; left: 400px; top: -30px" src="images/GamesCloud.png"></a>
   <a onclick="setHomeCloud(); setGameCloud();" href="/"><img class="clouds" id="home_cloud" style="position: absolute; width: 200px; left: 10px; top: -30px" src="images/HomeCloud.png"></a>
 
-  <h1>Search Settings</h1>
-
-  <!--
-
-<div style="text-align: center; background-color: #32313d;" class="parent">
-<h2 class="child inline-block-child" style="margin-top: 10px; font-size: 55px; font-family: candy_beansregular; color: #8683bf;" >Stealth (iFrame result)</h2>
-
-    <div class='child inline-block-child'>
-        <label style="bottom: 35px; left: 20px" class="switch">
-          <input id="stealth" type="checkbox">
-          <span class="slider round"></span>
-        </label>
-    </div>
-
-</div>
--->
-
-  <div style="text-align: center; background-color: #32313d;" class="parent">
-    <h2 id='corrosion_or_womginx' class="child inline-block-child">Corrosion</h2>
-    <!-- Rounded switch -->
+  <h1 class="large-h">Search Settings</h1>
+  <div style="text-align: center;" class="parent">
+    <h2 id='corrosion_or_womginx' class="child inline-block-child small-h">Corrosion</h2>
     <div class='child inline-block-child'>
       <label>
         <input id="corrosion" style="height: 30px; width: 30px" type="checkbox">
@@ -46,11 +24,10 @@
 
   </div>
 
-
-  <h1>Tab Cloaking</h1>
-  <div style="background-color: #32313d" id="settabs">
+  <h1 class="large-h">Tab Cloaking</h1>
+  <div id="settabs">
     <div class="settab7" onclick="setreset()"><img width="70" height="70" class="setimg" title="Pillow"
-        src="images/bigfav.ico"></div>
+        src="images/favicon.ico"></div>
     <div class="settab3" onclick="setgoogle()"><img width="75" height="75" class="setimg" title="Google"
         src="images/google2.png"></div>
     <div class="settab4" onclick="setgoogled()"><img width="75" height="75" class="setimg" title="Google Drive"
@@ -59,15 +36,15 @@
         src="images/zoom2.png"></div>
   </div>
 
-  <h1>Cloud Speed</h1>
-  <div style="background-color: #32313d; width: 100%; text-align: center" class="slidecontainer">
-    <h2>Home Cloud</h2>
+  <h1 class="large-h">Cloud Speed</h1>
+  <div style="width: 100%; text-align: center" class="slidecontainer">
+    <h2 class="medium-h">Home Cloud</h2>
     <input type="range" min="1" max="200" value="0" class="slider2" id="Home" style="width: 50%">
 
-    <h2>Games Cloud</h2>
-
+    <h2 class="medium-h">Games Cloud</h2>
     <input type="range" min="1" max="200" value="0" class="slider2" id="Games" style="width: 50%">
-    <h2>Settings Cloud</h2>
+
+    <h2 class="medium-h">Settings Cloud</h2>
     <input type="range" min="1" max="200" value="0" class="slider2" id="Settings" style="width: 50%">
   </div>
 
