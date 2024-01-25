@@ -67,7 +67,9 @@ localStorage.setItem("theme","Google");
 var theme = localStorage.getItem("theme") || "OverCloud";
 
 if (theme === "Google") {
-    window.location.replace("google.html");
+    if (!window.location.href.includes("google.html")) {
+        window.location.replace("google.html");
+    }
 }
 
 /*

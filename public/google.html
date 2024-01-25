@@ -2,50 +2,62 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="css/google.cssn">
-  <link rel="icon" href="https://google.com/favicon.ico">
-  <title>Google</title>
-  <meta name="author" content="Google">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/google.css" />
+    <link rel="icon" href="https://google.com/favicon.ico">
+    <title>Google</title>
+    <meta name="author" content="Google">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <center>
-  <header>
-    <ul>
-      <li><a class="signinbutton" href="#">Sign in</a></li>
-      <li><a onclick="redirect('apps.html')"><img class="apps" src="https://raw.githubusercontent.com/butterdogco/Boogle-2.0/main/img/apps.webp" title="Boogle apps"></a></li>
-      <li><a href="https://google.com/images">Images</a></li>
-      <li><a href="https://mail.google.com">Gmail</a></li>
-    </ul>
-  </header>
-  <div class="searchmain">
-    <div class="logo">
-      <img alt="Google" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png" style="height: 150px;">
-    </div>
-    <div class="bar">
-      <img class="icon" src="https://raw.githubusercontent.com/butterdogco/Boogle-2.0/main/img/magnifying_glass.webp">
-      <form autocomplete="off" method="get" action="https://sites.google.com/search/butter-dog-search?query=">
-        <div class="autocomplete">
-          <input id="myInput" class="searchbar" type="search" name="query" title="Search Google" />
+    <header>
+        <ul>
+            <li><a class="signinbutton" href="#">Sign in</a></li>
+            <li><a onclick="redirect('apps.html')"><img class="apps"
+                        src="https://raw.githubusercontent.com/butterdogco/Boogle-2.0/main/img/apps.webp"
+                        title="Boogle apps"></a></li>
+            <li><a href="https://google.com/images">Images</a></li>
+            <li><a href="https://mail.google.com">Gmail</a></li>
+        </ul>
+    </header>
+    <div class="searchmain">
+        <div class="logo">
+            <img alt="Google"
+                src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png"
+                style="height: 150px;">
+        </div>
+        <div class="bar">
+            <img class="icon"
+                src="https://raw.githubusercontent.com/butterdogco/Boogle-2.0/main/img/magnifying_glass.webp">
+            <form autocomplete="off">
+                <div class="autocomplete">
+                    <input type="text" name="url" class="searchbar" type="search" id="name" title="Search Google" />
+                </div>
+        </div>
+        <div class="buttons">
+            <button class="button" type="submit">Google Search</button>
+            </form>
+            <a href="#" class="button" type="button">I'm Feeling Lucky</a>
         </div>
     </div>
-    <div class="buttons">
-      <button class="button" type="submit">Google Search</button>
-      </form>
-      <a href="https://sites.google.com/search/butter-dog-search?query=how%20to&scope=site&showTabs=false" class="button" type="button">I'm Feeling Lucky</a>
-    </div>
-  </div>
 </center>
 <div class="footer">
-  <li class="left"><a href="https://about.google">About</a></li>
-  <li class="left"><a href="https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></li>
-  <li class="left"><a href="https://google.com/search/howsearchworks/?fg=1">How Search works</a></li>
-  <!-- <li class="right"><a href="https://boogle.b-dog.co/themes">Themes</a></li> -->
-  <li class="right"><a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a></li>
-  <li class="right"><a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a></li>
+    <li class="left"><a href="https://about.google">About</a></li>
+    <li class="left"><a
+            href="https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+    </li>
+    <li class="left"><a href="https://google.com/search/howsearchworks/?fg=1">How Search works</a></li>
+    <!-- <li class="right"><a href="https://boogle.b-dog.co/themes">Themes</a></li> -->
+    <li class="right"><a onclick="redirect('settings.html')">Settings</a></li>
+    <li class="right"><a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a></li>
+    <li class="right"><a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a></li>
 </div>
 
-<!-- Autocomplete and enter to search -->
-<!-- <script src="https://boogle.b-dog.co/js/autocomplete.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/home.js?47"></script>
+<script src="js/global.js"></script>
+<script src="uv/uv.bundle.js"></script>
+<script src="uv/uv.config.js"></script>
+<iframe id="stealth" src=""></iframe>
 
 </body>
 

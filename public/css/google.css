@@ -1,16 +1,5 @@
 @import url('https://https://raw.githubusercontent.com/butterdogco/Boogle-2.0/main/fonts/GoogleSans-Regular.ttf');
 
-body {
-  font-family: 'Google Sans', sans-serif;
-  margin: 0;
-  list-style-type: none;
-  animation: fadeInAnimation ease 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  background-color: rgb(54, 54, 54);
-  color: rgb(255, 255, 255);
-}
-
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -21,6 +10,17 @@ body {
     opacity: 1;
     background-color: rgb(54, 54, 54);
   }
+}
+
+body {
+  font-family: 'Google Sans', sans-serif;
+  margin: 0;
+  list-style-type: none;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  background-color: rgb(54, 54, 54);
+  color: rgb(255, 255, 255);
 }
 
 .autocomplete {
