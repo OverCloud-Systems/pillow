@@ -8,6 +8,8 @@ body {
     background: rgb(10,15,25);
     background: linear-gradient(133deg, rgba(10,15,25,1) 0%, rgba(9,9,60,1) 28%, rgba(10,13,50,1) 68%, rgba(10,15,25,1) 100%);
     animation: fadeIn 0.2s ease;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 @keyframes fadeIn {
