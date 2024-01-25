@@ -10,6 +10,9 @@ body {
     animation: fadeIn 0.2s ease;
     min-height: 100vh;
     overflow-x: hidden;
+    color: white;
+    margin: 0;
+    padding: 0;
 }
 
 @keyframes fadeIn {
