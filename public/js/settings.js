@@ -83,9 +83,9 @@ function setreset() {
 }
 
 function setTheme(name) {
-  const themes = ["default", "Google"];
+  const themes = ["OverCloud", "Google"];
   if (themes.includes(name)) {
-    localStorage.setItem("theme", name);    
+    localStorage.setItem("theme", name);
   }
 }
 

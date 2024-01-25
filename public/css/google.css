@@ -98,6 +98,12 @@ li a:hover {
   margin-bottom: 0px;
 }
 
+.logo img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
 .bar {
   margin: 0 auto;
   width: 575px;

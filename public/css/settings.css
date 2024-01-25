@@ -179,3 +179,20 @@ input:checked+.slider:before {
 footer {
   text-align: center;
 }
+
+select {
+  background: rgba(24, 30, 107, 0.5);
+  color: white;
+  padding: 8px;
+  border-radius: 12px;
+  font-size: 18px;
+  border: none;
+}
+
+select option {
+  background: rgba(24, 30, 107, 0.5);
+}
+
+select option:hover {
+  background: rgba(24, 30, 107, 1);
+}
