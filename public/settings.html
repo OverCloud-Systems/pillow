@@ -12,13 +12,13 @@
 
 <body id="body">
   <div class="tabs">
-    <a href="apps.html">
+    <a onclick="redirect('apps.html')">
       <div class="tab">
         <img src="images/applications.png">
         <p>Apps</p>
       </div>
     </a>
-    <a href="../">
+    <a onclick="redirect('../')">
       <div class="tab">
         <img src="images/internet.png">
         <p>Search</p>
@@ -50,7 +50,15 @@
         src="images/zoom2.png"></div>
   </div>
 
-  <h1 class="large-h">Cloud Speed</h1>
+  <h1 class="large-h">Search Theme</h1>
+  <div style="text-align: center;" class="parent">
+    <select id="themes_select" name="themes">
+      <option value="OverCloud">OverCloud</option>
+      <option value="Google">Google</option>
+    </select>
+  </div>
+
+  <!-- <h1 class="large-h">Cloud Speed</h1>
   <div style="width: 100%; text-align: center" class="slidecontainer">
     <h2 class="medium-h">Home Cloud</h2>
     <input type="range" min="1" max="200" value="0" class="slider2" id="Home" style="width: 50%">
@@ -60,14 +68,11 @@
 
     <h2 class="medium-h">Settings Cloud</h2>
     <input type="range" min="1" max="200" value="0" class="slider2" id="Settings" style="width: 50%">
-  </div>
-
-  <footer>
-    <p>Powered by Pillow</p>
-  </footer>
+  </div> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/settings.js"></script>
+  <script src="js/global.js"></script>
 </body>
 
 </html>

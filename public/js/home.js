@@ -60,7 +60,15 @@ form.addEventListener('submit', async event => {
         return false;
     };
 
-console.log(localStorage.getItem("corrosion"))
+// console.log(localStorage.getItem("corrosion"))
+
+var theme = localStorage.getItem("theme") || "default";
+if (theme != "OverCloud") {
+    // temp code
+    if (theme === "Google") {
+        redirect("google.html");
+    }
+}
 
 /*
 if(localStorage.getItem("corrosion") === 'true') {

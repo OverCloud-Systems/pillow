@@ -20,24 +20,29 @@ console.log(' ______ __ __ __                 \n' +
     '|___|  |__|__|__||_____|________|');
 
 
-var title = localStorage.getItem("title")
-var favicon = localStorage.getItem("favicon")
+var title = localStorage.getItem("title");
+var favicon = localStorage.getItem("favicon");
+var theme = localStorage.getItem("theme") || "OverCloud";
 
 if (localStorage.hasOwnProperty("title")) {
-    document.title = title
+  document.title = title;
 }
 
 if (localStorage.hasOwnProperty("favicon")) {
-    document.querySelector("link[rel='shortcut icon']").href = favicon;
+  document.querySelector("link[rel='shortcut icon']").href = favicon;
+}
+
+if (!localStorage.hasOwnProperty("theme")) {
+  localStorage.setItem("theme","default");
 }
 
 function settitle(title) {
   if (title !== "") {
-  localStorage.setItem("title", title)
-  document.title = title
+    localStorage.setItem("title", title)
+    document.title = title
   } else {
-  localStorage.removeItem("title")
-  document.title = "\u200E"
+    localStorage.removeItem("title")
+    document.title = "\u200E"
   }
 }
 
@@ -77,93 +82,98 @@ function setreset() {
   location.reload();
 }
 
-
-
-function setGameCloud(){
-  let left = document.getElementById('games_cloud').style.left;
-  /* console.log(left); */
-  localStorage.setItem('games_cloud', left);
-
-
-  let games_cloud = localStorage.getItem("games_cloud");
-  console.log('Games Cloud LocalStorage : ' + games_cloud);
+function setTheme(name) {
+  const themes = ["default", "Google"];
+  if (themes.includes(name)) {
+    localStorage.setItem("theme", name);    
+  }
 }
 
-function setHomeCloud(){
+const themes_set = document.getElementById("themes_select");
+themes_set.value = theme;
 
-  let left = document.getElementById('home_cloud').style.left;
-  /* console.log(left); */
-  localStorage.setItem('home_cloud', left);
-
-
-  let home_cloud = localStorage.getItem("home_cloud");
-  console.log('Homes Cloud LocalStorage : ' + home_cloud);
-
-}
+// function setGameCloud(){
+//   let left = document.getElementById('games_cloud').style.left;
+//   /* console.log(left); */
+//   localStorage.setItem('games_cloud', left);
 
 
-let games_cloud = localStorage.getItem("games_cloud");
-let home_cloud = localStorage.getItem("home_cloud");
+//   let games_cloud = localStorage.getItem("games_cloud");
+//   console.log('Games Cloud LocalStorage : ' + games_cloud);
+// }
+
+// function setHomeCloud(){
+
+//   let left = document.getElementById('home_cloud').style.left;
+//   /* console.log(left); */
+//   localStorage.setItem('home_cloud', left);
 
 
-if (localStorage.hasOwnProperty("games_cloud")) {
-    document.getElementById('games_cloud').style.left = games_cloud;
-}
+//   let home_cloud = localStorage.getItem("home_cloud");
+//   console.log('Homes Cloud LocalStorage : ' + home_cloud);
 
-if (localStorage.hasOwnProperty("home_cloud")) {
-    document.getElementById('home_cloud').style.left = home_cloud;
-}
+// }
 
 
-
-var homeSlider = document.getElementById("Home");
-
-homeSlider.value = Number(localStorage.getItem("home_cloud_speed") * 100);
-
-homeSlider.oninput = function() {
-  console.log(this.value);
-  localStorage.setItem("home_cloud_speed", (this.value / 100));
-} 
+// let games_cloud = localStorage.getItem("games_cloud");
+// let home_cloud = localStorage.getItem("home_cloud");
 
 
-var gamesSlider = document.getElementById("Games");
+// if (localStorage.hasOwnProperty("games_cloud")) {
+//     document.getElementById('games_cloud').style.left = games_cloud;
+// }
 
-gamesSlider.value = Number(localStorage.getItem("games_cloud_speed") * 100);
-
-gamesSlider.oninput = function() {
-  console.log(this.value);
-  localStorage.setItem("games_cloud_speed", (this.value / 100));
-} 
-
-var settingsSlider = document.getElementById("Settings");
-
-settingsSlider.value = Number(localStorage.getItem("settings_cloud_speed") * 100);
-
-settingsSlider.oninput = function() {
-  console.log(this.value);
-  localStorage.setItem("settings_cloud_speed", (this.value / 100));
-} 
+// if (localStorage.hasOwnProperty("home_cloud")) {
+//     document.getElementById('home_cloud').style.left = home_cloud;
+// }
 
 
-if (localStorage.getItem("home_cloud_speed") === null) {
-  localStorage.setItem("home_cloud_speed", 0.3)
-}
 
-if (localStorage.getItem("games_cloud_speed") === null) {
-  localStorage.setItem("games_cloud_speed", 0.5)
-}
+// var homeSlider = document.getElementById("Home");
+
+// homeSlider.value = Number(localStorage.getItem("home_cloud_speed") * 100);
+
+// homeSlider.oninput = function() {
+//   console.log(this.value);
+//   localStorage.setItem("home_cloud_speed", (this.value / 100));
+// } 
 
 
-if (localStorage.getItem("settings_cloud_speed") === null) {
-  localStorage.setItem("settings_cloud_speed", 0.3)
-}
+// var gamesSlider = document.getElementById("Games");
 
+// gamesSlider.value = Number(localStorage.getItem("games_cloud_speed") * 100);
+
+// gamesSlider.oninput = function() {
+//   console.log(this.value);
+//   localStorage.setItem("games_cloud_speed", (this.value / 100));
+// } 
+
+// var settingsSlider = document.getElementById("Settings");
+
+// settingsSlider.value = Number(localStorage.getItem("settings_cloud_speed") * 100);
+
+// settingsSlider.oninput = function() {
+//   console.log(this.value);
+//   localStorage.setItem("settings_cloud_speed", (this.value / 100));
+// } 
+
+
+// if (localStorage.getItem("home_cloud_speed") === null) {
+//   localStorage.setItem("home_cloud_speed", 0.3)
+// }
+
+// if (localStorage.getItem("games_cloud_speed") === null) {
+//   localStorage.setItem("games_cloud_speed", 0.5)
+// }
+
+
+// if (localStorage.getItem("settings_cloud_speed") === null) {
+//   localStorage.setItem("settings_cloud_speed", 0.3)
+// }
 
 let corrosion_check = true
 let corrosion_or_womginx = document.getElementById('corrosion_or_womginx')
 var corrosion = document.getElementById("corrosion");
-
-
 
 if(localStorage.getItem('corrosion') === 'true'){
   console.log('Corrosion')
