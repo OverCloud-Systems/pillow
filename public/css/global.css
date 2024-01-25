@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background: rgb(10,15,25);
+    background: linear-gradient(133deg, rgba(10,15,25,1) 0%, rgba(9,9,60,1) 28%, rgba(10,13,50,1) 68%, rgba(10,15,25,1) 100%);
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInBottom {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
