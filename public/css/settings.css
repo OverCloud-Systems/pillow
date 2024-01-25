@@ -12,14 +12,17 @@ body {
 
 .large-h {
   font-size: 60px;
+  text-align: center;
 }
 
 .medium-h {
   font-size: 45px;
+  text-align: center;
 }
 
 .small-h {
   font-size: 35px;
+  text-align: center;
 }
 
 /* Switch Stuff */

@@ -8,6 +8,8 @@ body {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	width: 100vw;
+	flex-wrap: wrap;
 }
 
 .grid-item {
@@ -20,6 +22,7 @@ body {
 	backdrop-filter: blur(12px);
 	--webkit-backdrop-filter: blur(12px);
 	border-radius: 12px;
+	display: inline-flex;
 }
 
 .grid-item div {

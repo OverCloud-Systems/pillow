@@ -11,14 +11,23 @@
 </head>
 <body scroll="no" id="body">
   <main>
-    <!-- Home Page -->
-    <a onclick="setSettingsCloud(); setGameCloud();" href="gs.html"><img class="clouds" id="games_cloud"
-        style="position: absolute; width: 200px; left: 400px; top: -30px" src="images/GamesCloud.png"></a>
-    <a onclick="setSettingsCloud(); setGameCloud();" href="settings.html"> <img class="clouds" id="settings_cloud" style="position: absolute; width: 200px; left: 10px" src="images/SettingsCloud.png"></a>
-    
+    <div class="tabs">
+      <a href="apps.html">
+        <div class="apps tab">
+          <img src="images/applications.png">
+          <p>Apps</p>
+        </div>
+      </a>
+      <a href="settings.html">
+        <div class="settings tab">
+          <img src="images/settings.png">
+          <p>Settings</p>
+        </div>
+      </a>
+    </div>
+
     <div class="search">
       <div style="text-align: center">
-        <!-- <img style="margin-right: 20px; margin-top: 190px;" src="images/OverCloud - Square.png"> -->
         <h1 style="font-size: 100px;">OverCloud</h1>
       </div>
 
@@ -31,7 +40,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/home.js?47"></script>
 
-    <!-- Ultraviolet -->
     <script src="uv/uv.bundle.js"></script>
     <script src="uv/uv.config.js"></script>
   </main>
