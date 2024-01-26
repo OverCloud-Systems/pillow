@@ -48,52 +48,51 @@ function settitle(title) {
 
 function setfavicon(icon) {
   if (icon !== "") {
-  localStorage.setItem("favicon", icon)
+  localStorage.setItem("favicon", icon);
   document.querySelector("link[rel='shortcut icon']").href = icon;
   } else {
-  localStorage.removeItem("favicon")
+  localStorage.removeItem("favicon");
   document.querySelector("link[rel='shortcut icon']").href = "/img/logo.svg";
   }
 }
 
 function setgoogle() {
-  settitle("Google")
-  setfavicon("https://www.google.com/favicon.ico")
+  settitle("Google");
+  setfavicon("https://www.google.com/favicon.ico");
 }
 
 function setgoogled() {
-  settitle("Google Drive")
-  setfavicon("https://www.drive.google.com/favicon.ico")
+  settitle("Google Drive");
+  setfavicon("https://www.drive.google.com/favicon.ico");
 }
 
 function setedpuzzle() {
-  settitle("Edpuzzle")
-  setfavicon("https://edpuzzle.imgix.net/favicons/favicon-32.png")
+  settitle("Edpuzzle");
+  setfavicon("https://edpuzzle.imgix.net/favicons/favicon-32.png");
 }
 
 function setzoom() {
   settitle("Zoom")
-  setfavicon("https://st1.zoom.us/zoom.ico")
+  setfavicon("https://st1.zoom.us/zoom.ico");
 }
 
 function setreset() {
-  localStorage.removeItem("title")
-  localStorage.removeItem("favicon")
+  localStorage.removeItem("title");
+  localStorage.removeItem("favicon");
   location.reload();
 }
 
 function setTheme(name) {
-  const themes = ["OverCloud", "Google"];
-  if (themes.includes(name)) {
+  // const themes = ["OverCloud", "Google"];
+  // if (themes.includes(name)) {
     localStorage.setItem("theme", name);
-  }
+  // }
 }
 
 const themes_set = document.getElementById("themes_select");
 themes_set.value = theme;
 themes_set.onchange = (event) =>{
   setTheme(themes_set.value);
-  alert(themes_set.value);
 }
 
 // function setGameCloud(){
