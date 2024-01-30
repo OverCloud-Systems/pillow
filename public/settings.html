@@ -28,23 +28,21 @@
 
   <h1 class="large-h">Search Settings</h1>
   <div style="text-align: center;" class="parent">
-    <h2 id='corrosion_or_womginx' class="child inline-block-child small-h">Corrosion</h2>
-    <div class='child inline-block-child'>
-      <label>
-        <input id="corrosion" style="height: 30px; width: 30px" type="checkbox">
-      </label>
-    </div>
+    <select id="prox_select" name="themes" onchange="setProx(document.getElementById('prox_select').value)">
+      <option value="corrosion">Corrosion</option>
+      <option value="womginx">Womginx</option>
+    </select>
   </div>
 
   <h1 class="large-h">Tab Cloaking</h1>
   <div id="settabs">
-    <div class="settab7" onclick="setreset()"><img width="70" height="70" class="setimg" title="Pillow"
+    <div class="settab7 settimg" onclick="setreset()"><img width="70" height="70" class="setimg" title="OverCloud (Default)"
         src="images/favicon.ico"></div>
-    <div class="settab3" onclick="setgoogle()"><img width="75" height="75" class="setimg" title="Google"
+    <div class="settab3 setimg" onclick="setgoogle()"><img width="75" height="75" class="setimg" title="Google"
         src="images/google2.png"></div>
-    <div class="settab4" onclick="setgoogled()"><img width="75" height="75" class="setimg" title="Google Drive"
+    <div class="settab4 setimg" onclick="setgoogled()"><img width="75" height="75" class="setimg" title="Google Drive"
         src="images/googledrive2.png"></div>
-    <div class="settab6" onclick="setzoom()"><img width="75" height="75" class="setimg" title="Zoom"
+    <div class="settab6 setimg" onclick="setzoom()"><img width="75" height="75" class="setimg" title="Zoom"
         src="images/zoom2.png"></div>
   </div>
 
@@ -56,19 +54,18 @@
     </select>
   </div>
 
+  <h1 class="large-h">Search Engine</h1>
+  <div style="text-align: center;" class="parent">
+    <select id="engine_select" name="engines" onchange="setEngine(document.getElementById('engine_select').value)">
+      <option value="Brave">Brave</option>
+      <option value="Google">Google</option>
+      <option value="DuckDuckGo">DuckDuckGo</option>
+      <option value="Bing">Bing</option>
+      <option value="Boogle">Boogle</option>
+    </select>
+  </div>
+
   <div class="footer">OverCloud 2024 - <a href="https://discord.gg/KZzVM4rfg6" class="footerlink">Discord</a></div>
-
-  <!-- <h1 class="large-h">Cloud Speed</h1>
-  <div style="width: 100%; text-align: center" class="slidecontainer">
-    <h2 class="medium-h">Home Cloud</h2>
-    <input type="range" min="1" max="200" value="0" class="slider2" id="Home" style="width: 50%">
-
-    <h2 class="medium-h">Games Cloud</h2>
-    <input type="range" min="1" max="200" value="0" class="slider2" id="Games" style="width: 50%">
-
-    <h2 class="medium-h">Settings Cloud</h2>
-    <input type="range" min="1" max="200" value="0" class="slider2" id="Settings" style="width: 50%">
-  </div> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://effective-fishstick-5ggjw7grp65v24469-8080.app.github.dev/js/settings.js"></script>

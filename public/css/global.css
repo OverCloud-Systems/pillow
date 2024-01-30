@@ -5,8 +5,8 @@
 }
 
 body {
-    background: rgb(10,15,25);
-    background: linear-gradient(133deg, rgba(10,15,25,1) 0%, rgba(9,9,60,1) 28%, rgba(10,13,50,1) 68%, rgba(10,15,25,1) 100%);
+    background: rgb(10, 15, 25);
+    background: linear-gradient(133deg, rgba(10, 15, 25, 1) 0%, rgba(9, 9, 60, 1) 28%, rgba(10, 13, 50, 1) 68%, rgba(10, 15, 25, 1) 100%);
     animation: fadeIn 0.2s ease;
     min-height: 100vh;
     overflow-x: hidden;
@@ -45,7 +45,8 @@ body {
     backdrop-filter: blur(12px);
 }
 
-.tab:hover p, .tab:hover img {
+.tab:hover p,
+.tab:hover img {
     opacity: 1;
 }
 
@@ -91,6 +92,7 @@ body {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -100,7 +102,22 @@ body {
     0% {
         transform: translateY(100px);
     }
+
     100% {
         transform: translateY(0);
+    }
+}
+
+@keyframes glowFlash {
+    0% {
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.144);
+    }
+
+    50% {
+        text-shadow: 0px 0px 8px white;
+    }
+
+    100% {
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.24);
     }
 }
