@@ -33,7 +33,7 @@
     <div class="footer">OverCloud 2024 - <a href="https://discord.gg/KZzVM4rfg6" class="footerlink">Discord</a></div>
 
     <script>
-        let games = ['EmulatorJS', 'Tether', '2048', 'Minecraft']
+        let games = ['EmulatorJS', 'Tether', '2048', 'Minecraft'];
         for (let x = 0; x < games.length; x++) {
             let game = document.createElement("div");
             game.id = games[x];
@@ -55,7 +55,7 @@
             let game_description = document.createElement("h5");
             game_description.className = "game_description"
 
-            let desc = '/games/' + games[x] + '/yup.json';
+            let desc = '/apps/' + games[x] + '/yup.json';
 
             fetch(desc)
                 .then(response => response.text())
