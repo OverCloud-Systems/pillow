@@ -20,4 +20,14 @@ server.on('upgrade', (req, socket, head) => {
 
 server.listen(process.env.PORT || 8080);
 
-console.log('Server Running :D')
+console.log('Server started!')
+
+function antiShutdown() {
+    console.log('Server is running and handling requests.');
+
+    setTimeout(() => {
+        antiShutdown();
+    }, 15000);
+}
+
+antiShutdown();

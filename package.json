@@ -1,7 +1,7 @@
 {
-  "name": "pillow",
+  "name": "overcloud",
   "version": "1.0.0",
-  "description": "NO MAKING FUN OF THE FUCKING CODE",
+  "description": "A web proxy powered by Pillow, by S1mon.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
