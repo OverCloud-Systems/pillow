@@ -28,10 +28,16 @@ var engine = localStorage.getItem("engine");
 
 if (localStorage.hasOwnProperty("title")) {
   document.title = title;
+  try {window.top.postMessage(`title-${title}`, '*')} catch (err) {console.log("No iframe found.");}
+} else {
+  try {window.top.postMessage(`title-default`, '*')} catch (err) {console.log("No iframe found.");}
 }
 
 if (localStorage.hasOwnProperty("favicon")) {
   document.querySelector("link[rel='shortcut icon']").href = favicon;
+  try {window.top.postMessage(`favicon-${favicon}`, '*')} catch (err) {console.log("No iframe found.");}
+} else {
+  try {window.top.postMessage(`favicon-default`, '*')} catch (err) {console.log("No iframe found.");}
 }
 
 if (!localStorage.hasOwnProperty("theme")) {
@@ -48,29 +54,23 @@ function settitle(title) {
   if (title !== "") {
     localStorage.setItem("title", title);
     document.title = title;
-    try {
-      window.top.postMessage(`title-${title}`, '*')
-    } catch (err) {
-      console.warn("No iframe found.");
-    }
+    try {window.top.postMessage(`title-${title}`, '*')} catch (err) {console.log("No iframe found.");}
   } else {
     localStorage.removeItem("title");
     document.title = "\u200E";
-    try {
-      window.top.postMessage('title-Calendar', '*')
-    } catch (err) {
-      console.warn("No iframe found.");
-    }
+    try {window.top.postMessage(`title-Calendar}`, '*')} catch (err) {console.log("No iframe found.");}
   }
 }
 
 function setfavicon(icon) {
   if (icon !== "") {
-  localStorage.setItem("favicon", icon);
-  document.querySelector("link[rel='shortcut icon']").href = icon;
+    localStorage.setItem("favicon", icon);
+    document.querySelector("link[rel='shortcut icon']").href = icon;
+    try {window.top.postMessage(`favicon-${icon}`, '*')} catch (err) {console.log("No iframe found.");}
   } else {
-  localStorage.removeItem("favicon");
-  document.querySelector("link[rel='shortcut icon']").href = "/img/logo.svg";
+    localStorage.removeItem("favicon");
+    document.querySelector("link[rel='shortcut icon']").href = "/img/logo.svg";
+    try {window.top.postMessage(`favicon-default`, '*')} catch (err) {console.log("No iframe found.");}
   }
 }
 

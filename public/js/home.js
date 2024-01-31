@@ -44,6 +44,8 @@ if (engine === null) {
     engine = localStorage.getItem('engine');
 }
 
+input.placeholder = `${''.concat("Search with ", engine)}`;
+
 form.addEventListener('submit', async event => {
     event.preventDefault();
     window.navigator.serviceWorker.register('./sw.js', {
@@ -104,9 +106,15 @@ var title = localStorage.getItem("title")
 var favicon = localStorage.getItem("favicon")
 
 if (localStorage.hasOwnProperty("title")) {
-    document.title = title
+    document.title = title;
+    try {window.top.postMessage(`title-${title}`, '*')} catch (err) {console.log("No iframe found.");}
+} else {
+    try {window.top.postMessage(`title-default`, '*')} catch (err) {console.log("No iframe found.");}
 }
 
 if (localStorage.hasOwnProperty("favicon")) {
     document.querySelector("link[rel='shortcut icon']").href = favicon;
+    try {window.top.postMessage(`favicon-${favicon}`, '*')} catch (err) {console.log("No iframe found.");}
+} else {
+    try {window.top.postMessage(`favicon-default`, '*')} catch (err) {console.log("No iframe found.");}
 }
