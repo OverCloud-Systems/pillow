@@ -44,7 +44,9 @@ if (engine === null) {
     engine = localStorage.getItem('engine');
 }
 
-input.placeholder = `${''.concat("Search with ", engine)}`;
+if (!window.location.href.includes("google.html")) {
+    input.placeholder = `${''.concat("Search with ", engine)}`;
+}
 
 form.addEventListener('submit', async event => {
     event.preventDefault();
@@ -59,7 +61,7 @@ form.addEventListener('submit', async event => {
             } else if (engine === "Google") {
                 url = 'https://google.com/search?q=' + url;
             } else if (engine === "DuckDuckGo") {
-                url = 'https://duckduckgo.com/search?q=' + url;
+                url = 'https://duckduckgo.com/?t=h_&q=' + url;
             } else if (engine === "Bing") {
                 url = 'https://bing.com/search?q=' + url;
             } else if (engine === "Boogle") {
