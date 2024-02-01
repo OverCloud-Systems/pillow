@@ -26,14 +26,6 @@
     </a>
   </div>
 
-  <h1 class="large-h">Search Settings</h1>
-  <div style="text-align: center;" class="parent">
-    <select id="prox_select" name="themes" onchange="setProx(document.getElementById('prox_select').value)">
-      <option value="corrosion">Corrosion</option>
-      <option value="womginx">Womginx</option>
-    </select>
-  </div>
-
   <h1 class="large-h">Tab Cloaking</h1>
   <div id="settabs">
     <div class="settab7 settimg" onclick="setreset()"><img width="70" height="70" class="setimg" title="OverCloud (Default)"
@@ -54,6 +46,14 @@
     </select>
   </div>
 
+  <h1 class="large-h">Search Method</h1>
+  <div style="text-align: center;" class="parent">
+    <select id="prox_select" name="themes" onchange="setProx(document.getElementById('prox_select').value)">
+      <option value="corrosion">Corrosion</option>
+      <option value="womginx">Womginx</option>
+    </select>
+  </div>
+
   <h1 class="large-h">Search Engine</h1>
   <div style="text-align: center;" class="parent">
     <select id="engine_select" name="engines" onchange="setEngine(document.getElementById('engine_select').value)">
@@ -61,6 +61,7 @@
       <option value="Google">Google</option>
       <option value="DuckDuckGo">DuckDuckGo</option>
       <option value="Bing">Bing</option>
+      <option value="Yahoo">Yahoo</option>
       <option value="Boogle">Boogle</option>
     </select>
   </div>
@@ -68,7 +69,7 @@
   <div class="footer">OverCloud 2024 - <a href="https://discord.gg/KZzVM4rfg6" class="footerlink">Discord</a></div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://effective-fishstick-5ggjw7grp65v24469-8080.app.github.dev/js/settings.js"></script>
+  <script src="js/settings.js"></script>
   <script src="js/global.js"></script>
 </body>
 

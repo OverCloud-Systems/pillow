@@ -64,6 +64,8 @@ form.addEventListener('submit', async event => {
                 url = 'https://duckduckgo.com/?t=h_&q=' + url;
             } else if (engine === "Bing") {
                 url = 'https://bing.com/search?q=' + url;
+            } else if (engine === "Yahoo") {
+                url = 'https://search.yahoo.com/search?q=' + url;
             } else if (engine === "Boogle") {
                 url = 'https://sites.google.com/search/butter-dog-search?query=' + url;
             }
