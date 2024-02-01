@@ -23,7 +23,7 @@ server.listen(process.env.PORT || 8080);
 console.log('Server started!')
 
 function antiShutdown() {
-    console.log('Server is running and handling requests.');
+    console.log(''.concat('Server is running and handling requests. ', Math.floor(Math.random() * 1000)));
 
     setTimeout(() => {
         antiShutdown();

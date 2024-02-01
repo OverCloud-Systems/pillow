@@ -33,7 +33,9 @@
     <div class="footer">OverCloud 2024 - <a href="https://discord.gg/KZzVM4rfg6" class="footerlink">Discord</a></div>
 
     <script>
-        let games = ['EmulatorJS', 'Tether', '2048', 'Minecraft'];
+        let games = ['EmulatorJS', 'Tether', '2048', 'Minecraft', 'Chrome Dino', 'Run 3'];
+        games.sort();
+
         for (let x = 0; x < games.length; x++) {
             let game = document.createElement("div");
             game.id = games[x];
