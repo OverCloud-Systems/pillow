@@ -50,7 +50,7 @@
 
             game_link.innerHTML = games[x];
             game_link.className = "game_link"
-            game_link.href = '/games/' + games[x];
+            game_link.href = '/apps/' + games[x];
 
             let game_description = document.createElement("h5");
             game_description.className = "game_description"
@@ -78,7 +78,7 @@
 
             let game_image = document.createElement("img")
 
-            game_image.src = '/games/' + games[x] + '/icon.png';
+            game_image.src = '/apps/' + games[x] + '/icon.png';
 
             game.appendChild(game_content);
             game_content.append(game_image);

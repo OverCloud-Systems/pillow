@@ -26,19 +26,17 @@
     </a>
   </div>
 
-  <h1 class="large-h">Tab Cloaking</h1>
+  <h1 class="large-h">Disguise</h1>
+  <p class="h-center">Changes the page title and icon to appear like another website</p>
   <div id="settabs">
-    <div class="settab7 settimg" onclick="setreset()"><img width="70" height="70" class="setimg" title="OverCloud (Default)"
-        src="images/favicon.ico"></div>
-    <div class="settab3 setimg" onclick="setgoogle()"><img width="75" height="75" class="setimg" title="Google"
-        src="images/google2.png"></div>
-    <div class="settab4 setimg" onclick="setgoogled()"><img width="75" height="75" class="setimg" title="Google Drive"
-        src="images/googledrive2.png"></div>
-    <div class="settab6 setimg" onclick="setzoom()"><img width="75" height="75" class="setimg" title="Zoom"
-        src="images/zoom2.png"></div>
+    <div class="setimg" onclick="setreset()"><img width="75" height="75" class="setimg" title="OverCloud (Default)" src="images/OverCloud - Square.png"></div>
+    <div class="setimg" onclick="setgoogle()"><img width="75" height="75" class="setimg" title="Google" src="images/google.png"></div>
+    <div class="setimg" onclick="setgoogled()"><img width="75" height="75" class="setimg" title="Google Drive" src="images/google_drive.png"></div>
+    <div class="setimg" onclick="setzoom()"><img width="75" height="75" class="setimg" title="Zoom" src="images/zoom.png"></div>
   </div>
 
   <h1 class="large-h">Search Theme</h1>
+  <p class="h-center">Changes the theme on the home page</p>
   <div style="text-align: center;" class="parent">
     <select id="themes_select" name="themes" onchange="setTheme(document.getElementById('themes_select').value)">
       <option value="OverCloud">OverCloud</option>
@@ -47,6 +45,7 @@
   </div>
 
   <h1 class="large-h">Search Method</h1>
+  <p class="h-center">The method used to access websites</p>
   <div style="text-align: center;" class="parent">
     <select id="prox_select" name="themes" onchange="setProx(document.getElementById('prox_select').value)">
       <option value="corrosion">Corrosion</option>
@@ -55,6 +54,7 @@
   </div>
 
   <h1 class="large-h">Search Engine</h1>
+  <p class="h-center">The engine used to search the web</p>
   <div style="text-align: center;" class="parent">
     <select id="engine_select" name="engines" onchange="setEngine(document.getElementById('engine_select').value)">
       <option value="Brave">Brave</option>

@@ -6,6 +6,10 @@ body {
   color: white;
 }
 
+h1, h2, h3, h4, p {
+  cursor: default;
+}
+
 .inline-block-child {
   display: inline-block;
 }
@@ -18,11 +22,19 @@ body {
 .medium-h {
   font-size: 45px;
   text-align: center;
+  cursor: default;
 }
 
 .small-h {
   font-size: 35px;
   text-align: center;
+}
+
+.h-center {
+  text-align: center;
+  opacity: 0.6;
+  margin-top: -35px;
+  font-style: italic;
 }
 
 /* Switch Stuff */
@@ -97,6 +109,14 @@ input:checked+.slider:before {
 div.setimg {
   margin-left: 5px;
   margin-right: 5px;
+  cursor: pointer;
+  transition: 0.15s ease;
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+}
+
+div.setimg:hover {
+  opacity: 0.8;
 }
 
 img.setimg {
